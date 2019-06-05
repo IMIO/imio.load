@@ -105,10 +105,10 @@ let
     };
 
     "Flask" = python.mkDerivation {
-      name = "Flask-1.0.2";
+      name = "Flask-1.0.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/4b/12/c1fbf4971fda0e4de05565694c9f0c92646223cff53f15b6eb248a310a62/Flask-1.0.2.tar.gz";
-        sha256 = "2271c0070dbcb5275fad4a82e29f23ab92682dc45f9dfbc22c02ba9b9322ce48";
+        url = "https://files.pythonhosted.org/packages/e9/96/8f6d83828a77306a119e12b215a7b0637c955b408fb1c161311a6891b958/Flask-1.0.3.tar.gz";
+        sha256 = "ad7c6d841e64296b962296c2c2dabc6543752985727af86a975072dea984b6f3";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -160,10 +160,10 @@ let
     };
 
     "Werkzeug" = python.mkDerivation {
-      name = "Werkzeug-0.15.2";
+      name = "Werkzeug-0.15.4";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/f3/c8/fa7e1a0283267bee8efa10c665d8dca27e591face7e333c789c85671b3ab/Werkzeug-0.15.2.tar.gz";
-        sha256 = "0a73e8bb2ff2feecfc5d56e6f458f5b99290ef34f565ffb2665801ff7de6af7a";
+        url = "https://files.pythonhosted.org/packages/59/2d/b24bab64b409e22f026fee6705b035cb0698399a7b69449c49442b30af47/Werkzeug-0.15.4.tar.gz";
+        sha256 = "a0b915f0815982fb2a09161cb8f31708052d0951c3ba433ccc5e1aa276507ca6";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -172,38 +172,6 @@ let
         homepage = "https://palletsprojects.com/p/werkzeug/";
         license = "BSD-3-Clause";
         description = "The comprehensive WSGI web application library.";
-      };
-    };
-
-    "atomicwrites" = python.mkDerivation {
-      name = "atomicwrites-1.3.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/ec/0f/cd484ac8820fed363b374af30049adc8fd13065720fd4f4c6be8a2309da7/atomicwrites-1.3.0.tar.gz";
-        sha256 = "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/untitaker/python-atomicwrites";
-        license = licenses.mit;
-        description = "Atomic file writes.";
-      };
-    };
-
-    "attrs" = python.mkDerivation {
-      name = "attrs-19.1.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/cc/d9/931a24cc5394f19383fbbe3e1147a0291276afa43a0dc3ed0d6cd9fda813/attrs-19.1.0.tar.gz";
-        sha256 = "f0b870f674851ecbfbbbd364d6b5cbdff9dcedbc7f3f5e18a6891057f21fe399";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://www.attrs.org/";
-        license = licenses.mit;
-        description = "Classes Without Boilerplate";
       };
     };
 
@@ -345,22 +313,6 @@ let
       };
     };
 
-    "more-itertools" = python.mkDerivation {
-      name = "more-itertools-7.0.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/29/ed/3a85eb4afdce6dc33e78dad885e17c678db8055bf65353e0de4944c72a40/more-itertools-7.0.0.tar.gz";
-        sha256 = "c3e4748ba1aad8dba30a4886b0b1a2004f9a863837b8654e7059eebf727afa5a";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/erikrose/more-itertools";
-        license = licenses.mit;
-        description = "More routines for operating on iterables, beyond itertools";
-      };
-    };
-
     "msgpack" = python.mkDerivation {
       name = "msgpack-0.6.1";
       src = pkgs.fetchurl {
@@ -377,79 +329,17 @@ let
       };
     };
 
-    "pluggy" = python.mkDerivation {
-      name = "pluggy-0.9.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/a7/8c/55c629849c64e665258d8976322dfdad171fa2f57117590662d8a67618a4/pluggy-0.9.0.tar.gz";
-        sha256 = "19ecf9ce9db2fce065a7a0586e07cfb4ac8614fe96edf628a264b1c70116cf8f";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/pytest-dev/pluggy";
-        license = "MIT license";
-        description = "plugin and hook calling mechanisms for python";
-      };
-    };
-
-    "py" = python.mkDerivation {
-      name = "py-1.8.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/f1/5a/87ca5909f400a2de1561f1648883af74345fe96349f34f737cdfc94eba8c/py-1.8.0.tar.gz";
-        sha256 = "dc639b046a6e2cff5bbe40194ad65936d6ba360b52b3c3fe1d08a82dd50b5e53";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [
-        self."setuptools-scm"
-      ];
-      propagatedBuildInputs = [ ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "http://py.readthedocs.io/";
-        license = "MIT license";
-        description = "library with cross-python path, ini-parsing, io, code, log facilities";
-      };
-    };
-
-    "pytest" = python.mkDerivation {
-      name = "pytest-4.4.0";
-      src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/f2/a9/fc3a4fb6959eb88d1151149c7ba27f96b389a123ada2d961a016bbdff641/pytest-4.4.0.tar.gz";
-        sha256 = "f21d2f1fb8200830dcbb5d8ec466a9c9120e20d8b53c7585d180125cce1d297a";
-      };
-      doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [ ];
-      propagatedBuildInputs = [
-        self."atomicwrites"
-        self."attrs"
-        self."more-itertools"
-        self."pluggy"
-        self."py"
-        self."requests"
-        self."six"
-      ];
-      meta = with pkgs.stdenv.lib; {
-        homepage = "https://docs.pytest.org/en/latest/";
-        license = "MIT license";
-        description = "pytest: simple powerful testing with Python";
-      };
-    };
-
     "pytest-runner" = python.mkDerivation {
-      name = "pytest-runner-4.4";
+      name = "pytest-runner-5.1";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/15/0a/1e73c3a3d3f4f5faf5eacac4e55675c1627b15d84265b80b8fef3f8a3fb5/pytest-runner-4.4.tar.gz";
-        sha256 = "00ad6cd754ce55b01b868a6d00b77161e4d2006b3918bde882376a0a884d0df4";
+        url = "https://files.pythonhosted.org/packages/d9/6d/4b41a74b31720e25abd4799be72d54811da4b4d0233e38b75864dcc1f7ad/pytest-runner-5.1.tar.gz";
+        sha256 = "25a013c8d84f0ca60bb01bd11913a3bcab420f601f0f236de4423074af656e7a";
       };
       doCheck = commonDoCheck;
-      buildInputs = commonBuildInputs ++ [
-        self."setuptools-scm"
-      ];
-      propagatedBuildInputs = [
-        self."pytest"
-      ];
+      buildInputs = commonBuildInputs ++ [ ];
+      propagatedBuildInputs = [ ];
       meta = with pkgs.stdenv.lib; {
-        homepage = "https://github.com/pytest-dev/pytest-runner";
+        homepage = "https://github.com/pytest-dev/pytest-runner/";
         license = "UNKNOWN";
         description = "Invoke py.test as distutils command with dependency resolution";
       };
@@ -472,10 +362,10 @@ let
     };
 
     "requests" = python.mkDerivation {
-      name = "requests-2.21.0";
+      name = "requests-2.22.0";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz";
-        sha256 = "502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e";
+        url = "https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz";
+        sha256 = "11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -493,10 +383,10 @@ let
     };
 
     "setuptools-scm" = python.mkDerivation {
-      name = "setuptools-scm-3.2.0";
+      name = "setuptools-scm-3.3.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/54/85/514ba3ca2a022bddd68819f187ae826986051d130ec5b972076e4f58a9f3/setuptools_scm-3.2.0.tar.gz";
-        sha256 = "52ab47715fa0fc7d8e6cd15168d1a69ba995feb1505131c3e814eb7087b57358";
+        url = "https://files.pythonhosted.org/packages/83/44/53cad68ce686585d12222e6769682c4bdb9686808d2739671f9175e2938b/setuptools_scm-3.3.3.tar.gz";
+        sha256 = "bd25e1fb5e4d603dcf490f1fde40fb4c595b357795674c3e5cb7f6217ab39ea5";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -525,10 +415,10 @@ let
     };
 
     "uncurl" = python.mkDerivation {
-      name = "uncurl-0.0.8";
+      name = "uncurl-0.0.9";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/cb/5c/9ad0825e7714f6fa919f19a80a29f13312c395f31c3c2dd2402181a48b7f/uncurl-0.0.8.tar.gz";
-        sha256 = "4b7e01d10fdd2ff3978fa9126eee5b6eaac8c98b858c5add627e3a01b403461f";
+        url = "https://files.pythonhosted.org/packages/fc/30/27be4700115427ac414c405de5c58a9de81ed5770b1db63eccdd660f17fe/uncurl-0.0.9.tar.gz";
+        sha256 = "b1f973014590b56fced9ee1bce50ece15aca130982107391c06b2b697bb224bd";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
@@ -544,10 +434,10 @@ let
     };
 
     "urllib3" = python.mkDerivation {
-      name = "urllib3-1.24.1";
+      name = "urllib3-1.25.3";
       src = pkgs.fetchurl {
-        url = "https://files.pythonhosted.org/packages/b1/53/37d82ab391393565f2f831b8eedbffd57db5a718216f82f1a8b4d381a1c1/urllib3-1.24.1.tar.gz";
-        sha256 = "de9529817c93f27c8ccbfead6985011db27bd0ddfcdb2d86f3f663385c6a9c22";
+        url = "https://files.pythonhosted.org/packages/4c/13/2386233f7ee40aa8444b47f7463338f3cbdf00c316627558784e3f542f07/urllib3-1.25.3.tar.gz";
+        sha256 = "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232";
       };
       doCheck = commonDoCheck;
       buildInputs = commonBuildInputs ++ [ ];
