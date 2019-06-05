@@ -1,15 +1,12 @@
 ---
-# Config file for automatic testing at travis-ci.org
+language: nix
 
-language: python
-python:
-  - 3.6
-  - 3.5
-  - 3.4
-  - 2.7
+before_install:
+  - sudo mkdir -p /etc/nix
+  - echo "binary-caches = https://cache.nixos.org https://imio.cachix.org" | sudo tee -a /etc/nix/nix.conf > /dev/null
+  - echo "binary-cache-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= imio.cachix.org-1:XRqcHQyUgbqq02ojDg0gdkEdHp63n5yINhBC55mPRKI=" | sudo tee -a /etc/nix/nix.conf > /dev/null
 
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -U tox-travis
-
-# Command to run tests, e.g. python setup.py test
-script: tox
+script:
+  - nix-env -iA cachix -f https://cachix.org/api/v1/install
+  - cachix use imio
+  - nix-shell --pure --run "SOURCE_DATE_EPOCH=315532800 pre-commit run --all"

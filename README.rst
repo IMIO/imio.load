@@ -6,8 +6,8 @@ Imio Load testing
 .. image:: https://img.shields.io/pypi/v/imio_load.svg
         :target: https://pypi.python.org/pypi/imio_load
 
-.. image:: https://img.shields.io/travis/IMIO/imio_load.svg
-        :target: https://travis-ci.org/IMIO/imio_load
+.. image:: https://img.shields.io/travis/IMIO/imio.load.svg
+        :target: https://travis-ci.org/IMIO/imio.load
 
 .. image:: https://readthedocs.org/projects/imio-load/badge/?version=latest
         :target: https://imio-load.readthedocs.io/en/latest/?badge=latest

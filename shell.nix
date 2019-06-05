@@ -16,5 +16,6 @@ pkgs.mkShell {
     requirements.packages."locustio"
     requirements.packages."uncurl"
     zsh
+    git
   ];
 }
